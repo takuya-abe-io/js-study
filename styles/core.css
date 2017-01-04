@@ -24,7 +24,7 @@ html,body {
 
 #imgFrame img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	vertical-align: top;
 }
 
@@ -46,8 +46,18 @@ html,body {
 	right: 10%;
 }
 .nextBtn--wrap  a{
+	display: block;
 	text-decoration: none;
+	color:#fff;
+	/*-webkit-transform: scale(1,1);*/
+	transition: all 200ms;
+	position: relative;
 }
+.nextBtn--wrap  a:hover{
+	color:#cc0066;
+	-webkit-transform: scale(0.9);
+}
+
 
 .copyright {
 	position: absolute;

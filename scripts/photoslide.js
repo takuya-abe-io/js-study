@@ -90,6 +90,7 @@ window.onload = function() {
 
 		// img要素の作成
 		var img = document.createElement('img');
+		// imgWrap要素の作成
 		var imgWrap =  document.createElement('div');
 
 		// 作成したimg要素に属性を設定
@@ -102,11 +103,11 @@ window.onload = function() {
 		// 作成したimg要素をHTMLに追加
 		photoFrame.appendChild(imgWrap).appendChild(img);
 
-
-		// 作成したimg要素を保存
+		// 作成したimgWrap 要素を photoList にオブジェクトとして追加
 		 item.element = imgWrap;
-
 	}
+
+	console.log("ADD" + photoList);
 
 	// 初期表示のために showPhoto 関数を実行する
 	showPhoto(currentIndex);
