@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/*#imgMain {
+	position: relative;
+}*/
+html,body {
+	margin: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#imgFrame div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#imgFrame img {
+	width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+
+#imgTitle {
+	position: absolute;
+	top: 5vh;
+	left: 5vw;
+	color: #fff;
+	text-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+.nextBtn--wrap {
+	position: absolute;
+	font-size: 200%;
+	height: 1em;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	right: 10%;
+}
+.nextBtn--wrap  a{
+	text-decoration: none;
+}
+
+.copyright {
+	position: absolute;
+	bottom: 5vh;
+	left: 5vw;
+	color: #fff;
+	text-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
