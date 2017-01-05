@@ -10,6 +10,19 @@ window.onload = function() {
 
 	// 画像リストの定義
 
+
+	// var jsonRead = new XMLHttpRequest();		  // XMLHttpRequest オブジェクトを生成する
+	// jsonRead.onreadystatechange = function() {		  // XMLHttpRequest オブジェクトの状態が変化した際に呼び出されるイベントハンドラ
+	//   if(jsonRead.readyState == 4 && jsonRead.status == 200){ // サーバーからのレスポンスが完了し、かつ、通信が正常に終了した場合
+	//     jsonRead.responseText;		          // 取得した JSON ファイルの中身を表示
+	//   }
+	// 	return;
+	// };
+	// jsonRead.open("GET", "data/img.json", false); // HTTPメソッドとアクセスするサーバーの　URL　を指定
+	// jsonRead.send(null);					    // 実際にサーバーへリクエストを送信
+	//
+	// var photoList = jsonRead;
+
 	var photoList = [	// 配列 に オブジェクトを入れる
 		{ src: 'img/Roncamp_28.jpg', title: 'Roncamp_28' },
 		{ src: 'img/Roncamp_21.jpg', title: 'Roncamp_21' },
@@ -23,6 +36,8 @@ window.onload = function() {
 		{ src: 'img/Roncamp_66.jpg', title: 'Roncamp_66' },
 		{ src: 'img/Roncamp_75.jpg', title: 'Roncamp_75' },
 	];
+
+	console.log(photoList); // => { hoge: 'piyo' }
 
 	var photoLength = photoList.length; // プロパティ → 値を返すもの
 
@@ -107,7 +122,7 @@ window.onload = function() {
 		 item.element = imgWrap;
 	}
 
-	console.log("ADD" + photoList);
+	console.log(photoList);
 
 	// 初期表示のために showPhoto 関数を実行する
 	showPhoto(currentIndex);
@@ -121,6 +136,54 @@ window.onload = function() {
 
 };
 
+	// 基本的な関数の作り方。=> function で宣言をして、実行する。
+
+	// その１ 関数を作って中で計算 。
+	function sum(a, b) {
+		const before = a + 10
+		const after  = b - 10
+		return (before + after);
+	}
+	const result = sum(40, 60); // 関数実行
+	console.log(result); // 表示 => 100
+
+	// その２ 関数に引数持たせる
+	function factory(material){
+		console.log(material + "を使って何かつくります"); // 表示
+	}
+
+	factory("みかんfnc02"); // 関数を実行
+	factory("りんごfnc02"); // 関数を実行
+
+	// その３ // 変数に関数を入れる。
+	const factory02 = function() {
+	    console.log("i am factory fnc03");
+	}
+
+	factory02("りんご03"); // 関数呼び出し
+
+
+	// その４ 変数に引数をとった関数を入れる。
+	const factory04 = function(name) {
+	    console.log("i am "+name+" factory fnc04");
+	}
+
+	factory04("りんご04");
+
+
+	// 配列に関数を入れて呼ぶ。
+	const funcs = {
+		"x" : function() {
+			console.log('i am x');
+		},
+		"y" : function() {
+			console.log('i am y');
+		}
+	}
+
+	funcs.x(); // 実行
+
+
 
 // alert('hello,word!');
-console.log(navigator.userAgent);
+//console.log(navigator.userAgent);
